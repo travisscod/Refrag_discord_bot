@@ -70,7 +70,7 @@ class RefragAPI {
                     'x-team-id': config.refrag.teamId
                 },
                 body: JSON.stringify({
-                    server_location_id: 26,
+                    server_location_id: 5,
                     game: 'cs2',
                     betaServer: false,
                     secureServer: false,

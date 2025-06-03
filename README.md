@@ -11,7 +11,7 @@ A Discord bot that starts CS2 retake servers using Refrag.
 
 2. Copy `.env.example` to `.env` and fill in your credentials:
    ```bash
-   cp .env.example .env
+   copy .env.example .env
    ```
 
 3. Update `.env` with your Discord bot token and Refrag.gg credentials

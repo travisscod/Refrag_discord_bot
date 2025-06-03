@@ -2,6 +2,18 @@ const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch
 const config = require('./config');
 
 class RefragAPI {
+    static AVAILABLE_MAPS = [
+        "de_overpass",
+        "de_anubis",
+        "de_ancient",
+        "de_mirage",
+        "de_vertigo",
+        "de_dust2",
+        "de_inferno",
+        "de_nuke",
+        "de_train"
+    ];
+
     constructor() {
         this.baseURL = 'https://api.refrag.gg';
         this.authData = null;
@@ -36,9 +48,13 @@ class RefragAPI {
         }
     }
 
-    async startNewServer(authData = this.authData) {
+    async startNewServer(map = 'de_mirage', authData = this.authData) {
         if (!authData) {
             throw new Error('Authentication required');
+        }
+
+        if (!RefragAPI.AVAILABLE_MAPS.includes(map)) {
+            throw new Error(`Invalid map. Available maps are: ${RefragAPI.AVAILABLE_MAPS.join(', ')}`);
         }
 
         try {
@@ -54,14 +70,14 @@ class RefragAPI {
                     'x-team-id': config.refrag.teamId
                 },
                 body: JSON.stringify({
-                    server_location_id: config.refrag.serverLocationId,
+                    server_location_id: 26,
                     game: 'cs2',
                     betaServer: false,
                     secureServer: false,
                     is_assessment: false,
                     launch_settings: {
                         mod: 'retakes',
-                        map: 'de_mirage'
+                        map: map
                     }
                 })
             });

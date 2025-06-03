@@ -1,6 +1,6 @@
-# CS2 Retake Discord Bot
+# CS2 Refrag Discord Bot
 
-A Discord bot that starts Counter-Strike 2 retake servers using the Refrag.gg API.
+A Discord bot that starts CS2 retake servers using Refrag.
 
 ## Setup
 

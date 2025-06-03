@@ -1,0 +1,27 @@
+{
+  "name": "cs2-retake-discord-bot",
+  "version": "1.0.0",
+  "description": "Discord bot for starting CS2 retake servers via Refrag.gg",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js",
+    "dev": "nodemon bot.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.0.0",
+    "node-fetch": "^3.0.0",
+    "dotenv": "^16.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "cs2",
+    "counter-strike",
+    "refrag"
+  ],
+  "author": "",
+  "license": "MIT"
+}

@@ -23,7 +23,7 @@ async function registerCommands() {
                         { name: 'Ancient', value: 'de_ancient' },
                         { name: 'Mirage', value: 'de_mirage' },
                         { name: 'Vertigo', value: 'de_vertigo' },
-                        { name: 'Dust II', value: 'de_dust2' },
+                        { name: 'Dust 2', value: 'de_dust2' },
                         { name: 'Inferno', value: 'de_inferno' },
                         { name: 'Nuke', value: 'de_nuke' },
                         { name: 'Train', value: 'de_train' }
